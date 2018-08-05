@@ -1,0 +1,79 @@
+body{
+  background-color: #cfcdfa;
+}
+
+h1{
+  position: absolute;
+  left: 50%;
+  font-family: Bradley Hand, cursive;
+  font-size: 70px;
+  font-weight: bold;
+  color: #0d0b0b;
+}
+.classDiv{
+  padding: 5px;
+  border: 2px solid black;
+  width: 250px;
+  margin: 10px;
+}
+.classDivSmall{
+  background-color: white;
+  padding: 3px;
+  border: 2px solid black;
+  width: 35px;
+  margin: 1px;
+}
+
+.addDevice{
+  display: inline-block;
+  color: #7FFFD4;
+  text-decoration: none;
+  background: #903cf0;
+  padding: 5px;
+  border: 2px solid darkblue;
+  margin: 5px;
+
+}
+.information{
+  color: #008B8B;
+  border: 2px solid darkblue;
+  border-radius: 8px;
+  background: #F0FFFF;
+  margin: 5px;
+  padding: 3px;
+
+}
+.classD{
+  padding: 5px;
+  border: 2px solid black;
+  width: 250px;
+  margin: 5px;
+  background-color: lightgrey;
+}
+.classD1{
+  padding: 5px;
+  border: 2px solid black;
+  width: 250px;
+  margin: 5px;
+  background-color: #f79f07;
+}
+.wrp {
+    width:700px;
+    margin:0 auto;
+    margin-top:20px;
+    height:70%;
+}
+.button{
+  background-color: white;
+  padding: 1px;
+  border: 2px solid black;
+  width: 20px;
+  height: 20px;
+  margin: 1px;
+}
+.on{
+  background-color: lightgreen;
+}
+.off{
+  background-color: red;
+}
