@@ -5,10 +5,10 @@ class Device {
     this._model = model;
     this._status = false;
   }
-  setModel(model) {
+  set model(model) {
       this._model = model;
   }
-  getModel() {
+  get model() {
       return this._model;
   }
   on() {
@@ -17,7 +17,7 @@ class Device {
   off() {
     this._status = false;
   }
-  getStatus() {
+  get status() {
     if (this._status === true) {
       return 'Вкл';
     } else {

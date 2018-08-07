@@ -15,7 +15,7 @@ class ElectricFire extends Device {
       this._power--;
     }
   }
-  getPower() {
+  get power() {
       return this._power;
   }
 }

@@ -7,16 +7,16 @@ class SmartHouse {
   this._tv = [];
   this._fire = [];
   }
-  setOwner(owner) {
+  set owner(owner) {
     this._owner = owner;
   }
-  setAdress(adress) {
+  set adress(adress) {
     this._adress = adress;
   }
-  getOwner() {
+  get owner() {
     return this._owner;
   }
-  getAdress() {
+  get adress() {
     return this._adress;
   }
   addTV(device) {
@@ -33,10 +33,10 @@ class SmartHouse {
     this._fire.splice(x, 1);
     return this._fire;
   }
-  getTV() {
+  get tv() {
     return this._tv;
   }
-  getElectricFire() {
+  get electricFire() {
     return this._fire;
   }
 }

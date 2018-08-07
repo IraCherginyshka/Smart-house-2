@@ -8,14 +8,14 @@ class TvSet extends Device {
   }
 
 
-  setChannel() {
-    let newChannel = +prompt('Введите номер канала', '');
+  set channel(newChannel) {
     if (0 <= newChannel && newChannel <= 100) {
       this._channel = newChannel;
     } else {
       alert('Номер канала должен быть в диапазоне от 1 до 100');
     }
   }
+  
   upChannel() {
     if (this._channel < 100 ) {
       this._channel++;
@@ -26,7 +26,7 @@ class TvSet extends Device {
       this._channel--;
     }
   }
-  getChannel() {
+  get channel() {
     return this._channel;
   }
   upVolume() {
@@ -39,7 +39,7 @@ class TvSet extends Device {
       this._volume--;
     }
   }
-  getVolume() {
+  get volume() {
     return this._volume;
   }
 }

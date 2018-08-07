@@ -13,10 +13,10 @@ function renderHouse(h) {
 
   var owner = document.createElement('input');
   owner.type = 'text';
-  owner.value = h.getOwner();
+  owner.value = h.owner;
   owner.className = 'information';
   owner.addEventListener('input', function () {
-    h.setOwner(owner.value);
+    h.owner = owner.value;
   });
 
   var label2 = document.createElement('label');
@@ -25,10 +25,10 @@ function renderHouse(h) {
 
   var adress = document.createElement('input');
   adress.type = 'text';
-  adress.value = h.getAdress();
+  adress.value = h.adress;
   adress.className = 'information';
   adress.addEventListener('input', function () {
-    h.setAdress(adress.value);
+    h.adress = adress.value;
   });
 
   var btn1 = document.createElement('button');
@@ -39,16 +39,7 @@ function renderHouse(h) {
     var addModel = prompt('Введите название модели телевизора','');
     renderTV(addModel);
   });
-/*
-  var btn2 = document.createElement('button');
-  btn2.type = 'button';
-  btn2.innerText = ' + Добавить кондиционер';
-  btn2.className = 'addDevice';
-  btn2.addEventListener('click', function () {
-    //renderConditioning(myHouse);
-    myHouse.addAirCondition(new AirConditioning);
-  });
-*/
+
   var btn3 = document.createElement('button');
   btn3.type = 'button';
   btn3.innerText = ' + Добавить камин';
@@ -64,7 +55,6 @@ function renderHouse(h) {
   document.getElementById('house').appendChild(label2);
   document.getElementById('adress').appendChild(adress);
   document.getElementById('house').appendChild(btn1);
-  //document.getElementById('house').appendChild(btn2);
   document.getElementById('house').appendChild(btn3);
 }
 
@@ -84,15 +74,15 @@ function renderTV (model) {
   var model = document.createElement('input');
   model.type = 'text';
   model.placeholder = 'Введите данные';
-  model.value = t.getModel();
+  model.value = t.model;
   model.className = 'information';
   model.addEventListener('input', function () {
-    t.setModel(model.value);
+    t.model(model.value);
   });
 
   var state = document.createElement('div');
   state.className = 'classDivSmall';
-  state.innerText = t.getStatus();
+  state.innerText = t.status;
 
   var onBtn = document.createElement("button");
   onBtn.type = "button";
@@ -100,7 +90,7 @@ function renderTV (model) {
   onBtn.className = "on";
   onBtn.addEventListener('click', function () {
     t.on();
-    state.innerText = t.getStatus();
+    state.innerText = t.status;
   });
 
   var offBtn = document.createElement("button");
@@ -109,7 +99,7 @@ function renderTV (model) {
   offBtn.className = "off";
   offBtn.addEventListener('click', function () {
     t.off();
-    state.innerText = t.getStatus();
+    state.innerText = t.status;
   });
 
   var p = document.createElement('p');
@@ -117,10 +107,10 @@ function renderTV (model) {
 
   var channel = document.createElement('div');
   channel.className = 'classDivSmall';
-  channel.innerText = t.getChannel();
+  channel.innerText = t.channel;
   channel.addEventListener('click', function () {
-    t.setChannel();
-    channel.innerText = t.getChannel();
+    t.channel = +prompt('Введите номер канала', '');
+    channel.innerText = t.channel;
   });
 
   var btnUp = document.createElement('input');
@@ -129,7 +119,7 @@ function renderTV (model) {
   btnUp.className = 'button';
   btnUp.addEventListener('click', function () {
     t.upChannel();
-    channel.innerText = t.getChannel();
+    channel.innerText = t.channel;
   });
 
   var btnDown = document.createElement('input');
@@ -138,7 +128,7 @@ function renderTV (model) {
   btnDown.className = 'button';
   btnDown.addEventListener('click', function () {
     t.downChannel();
-    channel.innerText = t.getChannel();
+    channel.innerText = t.channel;
   });
 
   var p1 = document.createElement('p');
@@ -146,7 +136,7 @@ function renderTV (model) {
 
   var volume = document.createElement('div');
   volume.className = 'classDivSmall';
-  volume.innerText = t.getVolume();
+  volume.innerText = t.volume;
 
   var btnUpVolume = document.createElement('input');
   btnUpVolume.type = 'button';
@@ -154,7 +144,7 @@ function renderTV (model) {
   btnUpVolume.className = 'button';
   btnUpVolume.addEventListener('click', function () {
     t.upVolume();
-    volume.innerText = t.getVolume();
+    volume.innerText = t.volume;
   });
 
   var btnDownVolume = document.createElement('input');
@@ -163,7 +153,7 @@ function renderTV (model) {
   btnDownVolume.className = 'button';
   btnDownVolume.addEventListener('click', function () {
     t.downVolume();
-    volume.innerText = t.getVolume();
+    volume.innerText = t.volume;
   });
 
   var deleteBtn = document.createElement('button');
@@ -213,15 +203,15 @@ function renderFire (model) {
   var model = document.createElement('input');
   model.type = 'text';
   model.placeholder = 'Введите данные';
-  model.value = f.getModel();
+  model.value = f.model;
   model.className = 'information';
   model.addEventListener('input', function () {
-    f.setModel(model.value);
+    f.model(model.value);
   });
 
   var state = document.createElement('div');
   state.className = 'classDivSmall';
-  state.innerText = f.getStatus();
+  state.innerText = f.status;
 
   var onBtn = document.createElement("button");
   onBtn.type = "button";
@@ -229,7 +219,7 @@ function renderFire (model) {
   onBtn.className = "on";
   onBtn.addEventListener('click', function () {
     f.on();
-    state.innerText = f.getStatus();
+    state.innerText = f.status;
   });
 
   var offBtn = document.createElement("button");
@@ -238,7 +228,7 @@ function renderFire (model) {
   offBtn.className = "off";
   offBtn.addEventListener('click', function () {
     f.off();
-    state.innerText = f.getStatus();
+    state.innerText = f.status;
   });
 
   var p = document.createElement('p');
